@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Buzón Virtual - Liceo La Pradera</title>
+
+<link rel="stylesheet" href="estilos.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="fondo"></div>
+
+<nav>
+
+<div class="nav-container">
+
+<div class="logo-area">
+<img src="logo.png" class="logo">
+
+<div class="nombre">
+INSTITUCIÓN EDUCATIVA<br>
+<span>LICEO LA PRADERA</span>
+</div>
+</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#buzon">Buzón</a></li>
+<li><a href="#sugerencias">Sugerencias</a></li>
+<li><a href="#estadisticas">Estadísticas</a></li>
+</ul>
+
+<button onclick="loginAdmin()">🔐 Admin</button>
+
+</div>
+
+</nav>
+
+<section id="inicio" class="hero">
+
+<h1>Buzón Virtual de Sugerencias</h1>
+
+<p>Participa para mejorar nuestra institución</p>
+
+<a href="#buzon" class="btn">Enviar sugerencia</a>
+
+</section>
+
+<section id="buzon" class="seccion">
+
+<h2>Nueva sugerencia</h2>
+
+<div class="card">
+
+<form id="formulario">
+
+<select id="categoria" required>
+
+<option value="">Selecciona categoría</option>
+<option>Académico</option>
+<option>Convivencia</option>
+<option>Infraestructura</option>
+
+</select>
+
+<textarea id="mensaje" placeholder="Escribe tu sugerencia..." required></textarea>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="sugerencias" class="seccion">
+
+<h2>Sugerencias de estudiantes</h2>
+
+<div id="listaSugerencias" class="grid"></div>
+
+</section>
+
+<section id="estadisticas" class="seccion">
+
+<h2>Panel de estadísticas</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h3 id="total">0</h3>
+<p>Total</p>
+</div>
+
+<div class="stat-box">
+<h3 id="acad">0</h3>
+<p>Académico</p>
+</div>
+
+<div class="stat-box">
+<h3 id="conv">0</h3>
+<p>Convivencia</p>
+</div>
+
+<div class="stat-box">
+<h3 id="infra">0</h3>
+<p>Infraestructura</p>
+</div>
+
+</div>
+
+<canvas id="grafica"></canvas>
+
+</section>
+
+<div id="notificacion"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
